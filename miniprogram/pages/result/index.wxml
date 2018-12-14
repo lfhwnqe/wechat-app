@@ -1,0 +1,3 @@
+<view>显示请求结果和错误信息</view>
+<view>{{msg}}</view>
+<button bindtap="backToHome">返回</button>

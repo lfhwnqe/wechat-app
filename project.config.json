@@ -6,13 +6,14 @@
 		"es6": true,
 		"postcss": true,
 		"minified": true,
-		"newFeature": true
+		"newFeature": true,
+		"nodeModules": true
 	},
 	"appid": "wxaf7062991dbf4f1d",
-	"projectname": "wx_test",
+	"projectname": "wine_sale",
 	"libVersion": "2.2.5",
 	"condition": {
-		  "search": {
+		"search": {
 			"current": -1,
 			"list": []
 		},
@@ -31,9 +32,10 @@
 			"current": 0,
 			"list": [
 				{
-					"id": -1,
+					"id": 0,
 					"name": "db guide",
-					"pathName": "pages/databaseGuide/databaseGuide"
+					"pathName": "pages/index/index",
+					"query": ""
 				}
 			]
 		}

@@ -1,0 +1,27 @@
+<template name="dialog">
+  <view class="weui-mask {{ animateCss }}" wx:if="{{ visible }}"></view>
+  <view class="weui-dialog {{ animateCss }}" wx:if="{{ visible }}">
+    <view class="weui-dialog__con">
+      <view class="weui-dialog__hd" wx:if="{{ title }}">{{ title }}</view>
+      <view class="weui-dialog__logo" wx:if="{{ image }}">
+        <image src="{{ image }}"></image>
+      </view>
+      <view class="weui-dialog__pre-bd {{ dark ? 'weui-dialog__pre-bd-dark' : ''}}" wx:if="{{ (image || pre) && lines.length }}">
+        <view
+          class="weui-dialog__pre-bd-line"
+          wx:for='{{ lines }}'
+          wx:key='{{ index }}'
+        >{{ item }}</view>
+      </view>
+      <view wx:if="{{!image && !pre && content}}" class="weui-dialog__bd">{{content}}</view>
+      <view 
+      class="weui-dialog__ft {{buttons && buttons.length === 2 ? 'weui-dialog__hascancel' : ''}}" wx:if="{{ buttons && buttons.length }}">
+        <block 
+          wx:for="{{ buttons }}" 
+          wx:key="{{ index }}">
+          <view class="weui-dialog__btn {{ item.type }}" data-index="{{ index }}" bindtap="{{ buttonTapped }}">{{ item.text }}</view>
+        </block>
+      </view>
+    </view>
+  </view>
+</template>

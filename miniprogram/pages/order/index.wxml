@@ -1,0 +1,13 @@
+<view class="section">
+  <input bindinput="bindKeyInput" placeholder="输入订单重量" />
+  <input bindinput="bindKeyInput" placeholder="输入品类" />
+  <input bindinput="bindKeyInput" placeholder="输入总价" />
+  <input bindinput="bindKeyInput" placeholder="输入折扣" />
+  <view>总价：{{totalAmount}}</view>  
+</view>
+<view>
+  <button  bindtap='uploadOrder'>提交订单积分</button>
+</view>
+<view>显示用户信息</view>
+<view>显示用户积分</view>
+<view>显示用户近期消费记录</view>

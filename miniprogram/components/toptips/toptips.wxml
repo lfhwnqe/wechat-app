@@ -1,0 +1,7 @@
+<template name="toptips">
+  <view class="weui-toptips_mask" catchtap="$wux.toptips.hide" wx:if="{{ visible }}"></view>
+	<view class="weui-toptips {{ animateCss }} {{ className }}" wx:if="{{ visible }}">
+    <view class="weui-toptips_icon"><image src="{{ icon }}"></image></view>
+		<view class="weui-toptips_content">{{ text }}</view>
+	</view>
+</template>

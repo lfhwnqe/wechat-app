@@ -1,0 +1,6 @@
+@import './styles/common.wxss';
+@import './styles/animate.wxss';
+
+@import './styles/backdrop.wxss';
+@import './styles/dialog.wxss';
+@import './styles/toptips.wxss';

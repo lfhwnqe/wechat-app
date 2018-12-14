@@ -10,3 +10,8 @@
 
 - [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
 
+
+## 完成步骤
+1. 登陆时获取用户角色
+2. 如果用户没有角色则创建user角色
+
