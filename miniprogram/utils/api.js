@@ -1,4 +1,10 @@
+const BASEURL = require('./../config').BASEURL
+
 const api = {
-    code2Session: 'https://api.weixin.qq.com/sns/jscode2session'
+    getUserInfo: '/userInfo'
 }
+
+Object.keys.forEach(k => {
+    api[k] = BASEURL + api[k]
+})
 module.exports = api;

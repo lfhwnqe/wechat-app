@@ -1,8 +1,0 @@
-<!-- index.wxml -->
-<view class="container">
-    <button bindtap='scanCode'>扫描二维码</button>
-    <view>手动记账</view>
-    <view>本周统计：8000元</view>
-    <view>本月统计：50000元</view>
-    <view>详细收入信息</view>
-</view>

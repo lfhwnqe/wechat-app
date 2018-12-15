@@ -42,11 +42,25 @@ const promisify = (api) => {
     });
   }
 }
+// 保存storage和app
+const saveGlobalAndStorageSync = (key, data = {}) => {
+  const app = getApp();
+  wx.setStorageSync(key, data)
+  app.globalData[key] = data
+}
+// 删除缓存与app内变量
+const removeGlobalAndStorageSync = (key) => {
+  const app = getApp();
+  wx.removeStorageSync(key)
+  app.globalData[key] = null
+}
 
 module.exports = {
   px2rpx,
   rpx2px,
   promisify,
   request,
-  api
+  api,
+  saveGlobalAndStorageSync,
+  removeGlobalAndStorageSync
 }
