@@ -27,8 +27,10 @@ App({
   // 启动小程序检查session是否过期，过期则清除缓存重新登陆
   async checkNeedLogin() {
     wxCheckSession().then(_ => {
+    // session未过期，获取本地缓存的openid和session
       this.getUserInfoFromStorage()
     }).catch(e => {
+    // session过期清除缓存，重新登陆
       console.log('error:', e);
       ['openid', 'session_key'].forEach(k => {
         removeGlobalAndStorageSync(k)
@@ -36,6 +38,7 @@ App({
       this.login()
     })
   },
+  // 登陆，获取用户openid等
   async login() {
     const result = await wxLogin()
     if (!result.code) return
@@ -44,6 +47,7 @@ App({
       saveGlobalAndStorageSync(k, userInfo[k])
     })
   },
+  // 获取本地缓存
   async getUserInfoFromStorage() {
     const app = getApp();
     ['openid', 'session_key'].forEach(k => {

@@ -6,7 +6,7 @@
         </view>
     </view>
     <view class="body_nav" hover-class="none" hover-stop-propagation="false">
-        <view bindtap="myIntegral" class="body_nav-item">我的积分</view>
-        <view bindtap="myShop" class="body_nav-item">我的店铺</view>
+        <view class="body_nav-item">我的积分</view>
+        <view class="body_nav-item">我的店铺</view>
     </view>
 </view>

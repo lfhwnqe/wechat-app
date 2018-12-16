@@ -24,12 +24,12 @@ Page({
   },
   myIntegral() {
     wx.navigateTo({
-      url: '/pages/my-integral/index'
+      url: 'my-integral'
     })
   },
   myShop() {
     wx.navigateTo({
-      url: '/pages/my-shop/index'
+      url: 'my-shop'
     })
   }
 })

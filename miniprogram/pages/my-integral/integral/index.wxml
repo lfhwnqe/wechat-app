@@ -1,0 +1,9 @@
+<!-- index.wxml -->
+<view class="body">
+    <view class="body_main" hover-class="none" hover-stop-propagation="false">
+        <view wx:for="{{integralList}}" data-id="{{item.id}}" wx:key="id" class="body_main-list" hover-class="none" hover-stop-propagation="false" bindtap="goPointsDetail">
+            {{item.name}}
+           {{item.points}}
+        </view>
+    </view>
+</view>

@@ -1,0 +1,8 @@
+.body_main {
+  height: 80%;
+}
+
+.body_main-code {
+  width: 720rpx;
+  height: 720rpx;
+}
